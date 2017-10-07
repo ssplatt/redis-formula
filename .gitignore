@@ -1,0 +1,6 @@
+.git
+.kitchen
+.kitchen.local.yml
+.vagrant
+.DS_store
+*.gem

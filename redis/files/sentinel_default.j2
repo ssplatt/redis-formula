@@ -1,0 +1,12 @@
+{%- from "redis/map.jinja" import redis with context -%}
+# redis-sentinel configure options
+
+# ULIMIT: Call ulimit -n with this argument prior to invoking Redis Sentinel
+# itself.  This may be required for high-concurrency environments. Redis
+# Sentinel itself cannot alter its limits as it is not being run as root.
+# (default: do not call ulimit)
+#
+# ULIMIT=65536
+{% if redis.sentinel.ulimit is defined %}
+ULIMIT={{ redis.sentinel.ulimit }}
+{% endif %}

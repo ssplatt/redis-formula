@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+# Defaults for redis
+
+redis:
+  enabled: True
+  service:
+    name: 'redis-server'
+    state: 'running'
+    enable: True
+  install_from: 'package'
+  repos_managed: True
+  server_pkg: 'redis-server'
+  client_pkg: 'redis-tools'
+  required_pkgs:
+    - 'libjemalloc1'
+  server: True
+  client: False
+  port: 6379
+  bind_ip: 'localhost'
